@@ -1,4 +1,6 @@
 remote_theme: "mmistakes/minimal-mistakes@4.28.0"
+minimal_mistakes_skin    : "dark"
 title: MyM Soluciones
+logo                     : "/assets/images/apple-touch-icon.png"
 plugins:
   - jekyll-include-cache
