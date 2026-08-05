@@ -1,2 +1,4 @@
-theme: minima
+remote_theme: "mmistakes/minimal-mistakes@4.28.0"
 title: MyM Soluciones
+plugins:
+  - jekyll-include-cache

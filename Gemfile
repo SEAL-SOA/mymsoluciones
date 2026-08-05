@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 5.0"
-gem "jekyll-theme-minima", "~> 2.5"
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
