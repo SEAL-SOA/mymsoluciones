@@ -10,3 +10,59 @@
     text-decoration: none;
     font-weight: bold;
 }
+
+.page-content {
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+    padding: 3rem 1.5rem;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-logo img {
+    width: 180px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    margin: 0.5rem 0 0.5rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.hero-text p {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #444;
+    max-width: 760px;
+}
+
+.service-cards {
+    display: grid;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 1.75rem;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.service-card h2 {
+    margin-top: 0;
+    font-size: 1.35rem;
+}
+
+.service-card p {
+    margin: 0.75rem 0 0;
+    color: #333;
+    line-height: 1.8;
+}
