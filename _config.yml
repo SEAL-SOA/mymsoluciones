@@ -11,6 +11,8 @@ baseurl: ""
 logo: "/assets/images/logo.svg"
 masthead_title: " "
 
+site_navigation: main
+
 phone: "+54 9 11 2345-6789"
 phone_link: "+5491123456789"
 email: "info@mymsoluciones.com.ar"
