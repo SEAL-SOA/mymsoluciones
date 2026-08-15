@@ -1,12 +1,12 @@
-# Configuration for MyM Soluciones GitHub Pages website
+# Configuration for M&M Soluciones Electromecánicas GitHub Pages website
 remote_theme: "mmistakes/minimal-mistakes@4.28.0"
 minimal_mistakes_skin: "dark"
 
 locale: "es-AR"
-title: "MyM Soluciones"
+title: "M&M Soluciones Electromecánicas"
 title_separator: "|"
-subtitle: "Ingeniería y Mantenimiento Industrial"
-description: "Servicios de mantenimiento electromecánico, automatización industrial, programación de PLCs, reparación electrónica y líneas de inyección."
+subtitle: "Ingeniería, Mantenimiento Industrial y Automatización"
+description: "Servicios profesionales de mantenimiento electromecánico, automatización industrial, programación de PLCs, reparación electrónica y líneas de inyección."
 url: "https://seal-soa.github.io"
 baseurl: "/mymsoluciones"
 logo: "/assets/images/logo.svg"

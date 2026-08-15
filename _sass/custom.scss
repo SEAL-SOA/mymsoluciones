@@ -1,42 +1,51 @@
 /* ==========================================================================
-   MyM Soluciones - Industrial Maintenance & Automation Styling
-   Inspired by Eleconar aesthetic (Cyan / Deep Dark / Crisp Industrial White)
+   M&M Soluciones Electromecánicas - Styling
+   Theme: Industrial Royal & Deep Navy Blue Palette (Matching official logo)
    ========================================================================== */
 
 /* Color Tokens */
-$cyan-400: #22d3ee;
-$cyan-500: #06b6d4;
-$cyan-300: #67e8f9;
-$cyan-100: #cffafe;
-$blue-900: #0f2759;
-$blue-800: #1e3a8a;
-$blue-600: #2563eb;
-$dark-950: #050b14;
-$dark-900: #0b1120;
-$dark-800: #111827;
-$dark-700: #1f2937;
-$gray-900: #111827;
-$gray-800: #1f2937;
-$gray-700: #374151;
-$gray-600: #4b5563;
-$gray-500: #6b7280;
-$gray-400: #9ca3af;
-$gray-200: #e5e7eb;
-$gray-100: #f3f4f6;
+$blue-950: #050e1d; // Deepest midnight navy
+$blue-900: #0a1f44; // Industrial deep navy
+$blue-850: #0d2757; // Rich navy
+$blue-800: #10326e; // Classic navy
+$blue-700: #1d4ed8; // Royal blue
+$blue-600: #2563eb; // Primary vibrant royal blue
+$blue-500: #3b82f6; // Electric blue highlight
+$blue-400: #60a5fa; // Sky blue accent
+$blue-300: #93c5fd; // Soft sky blue
+$blue-200: #bfdbfe; // Light blue tint
+$blue-100: #dbeafe; // Subtle blue highlight
+$blue-50:  #f0f7ff; // Crisp tinted background
+
+$dark-950: #060d18;
+$dark-900: #0a172a;
+$dark-800: #0f233d;
+$dark-700: #1e3a5f;
+
+$gray-900: #0f172a;
+$gray-800: #1e293b;
+$gray-700: #334155;
+$gray-600: #475569;
+$gray-500: #64748b;
+$gray-400: #94a3b8;
+$gray-300: #cbd5e1;
+$gray-200: #e2e8f0;
+$gray-100: #f1f5f9;
 $gray-50:  #f8fafc;
+
 $white:    #ffffff;
 $whatsapp: #25d366;
 $whatsapp-hover: #22bf5b;
 
-/* Utility Colors */
-.text-cyan { color: $cyan-400 !important; }
-.text-cyan-light { color: $cyan-100 !important; }
+/* Utility Classes */
+.text-blue-light { color: $blue-400 !important; }
+.text-blue-highlight { color: $blue-300 !important; }
 .text-white { color: $white !important; }
 .text-whatsapp { color: $whatsapp !important; }
 .relative-z { position: relative; z-index: 2; }
 .flex-center { display: flex; align-items: center; justify-content: center; }
 
-/* Base Reset for Minimal Mistakes */
+/* Base Reset */
 html {
   scroll-behavior: smooth;
 }
@@ -93,12 +102,12 @@ body.eleconar-style {
    Top Contact Bar
    ========================================================================== */
 .top-bar {
-  background: $cyan-400;
-  color: #000000;
+  background: linear-gradient(90deg, #102a5c 0%, #1e40af 100%);
+  color: $white;
   font-size: 0.8125rem;
   font-weight: 600;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   .container {
     display: flex;
@@ -109,16 +118,17 @@ body.eleconar-style {
   &__link {
     display: inline-flex;
     align-items: center;
-    color: #000000;
+    color: $blue-100;
     text-decoration: none;
-    transition: opacity 0.2s;
+    transition: color 0.2s, opacity 0.2s;
 
     &:hover {
-      opacity: 0.8;
-      color: #000000;
+      color: $white;
+      opacity: 1;
     }
 
     &--phone {
+      color: $white;
       font-weight: 700;
     }
   }
@@ -128,8 +138,9 @@ body.eleconar-style {
     height: 1rem;
     max-width: 1rem;
     max-height: 1rem;
-    margin-right: 0.4rem;
+    margin-right: 0.45rem;
     flex-shrink: 0;
+    color: $blue-300;
   }
 
   &__text-short {
@@ -154,19 +165,19 @@ body.eleconar-style {
    Main Sticky Masthead Navigation
    ========================================================================== */
 .site-masthead {
-  background: $dark-950;
+  background: $blue-950;
   color: $white;
   position: sticky;
   top: 0;
   z-index: 999;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  box-shadow: 0 4px 25px rgba(5, 14, 29, 0.6);
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 4.75rem;
+    min-height: 4.85rem;
     gap: 1.5rem;
   }
 
@@ -176,9 +187,9 @@ body.eleconar-style {
     text-decoration: none;
 
     img {
-      height: 2.6rem;
+      height: 2.85rem;
       width: auto;
-      max-width: 200px;
+      max-width: 280px;
       display: block;
     }
   }
@@ -197,7 +208,7 @@ body.eleconar-style {
   }
 
   &__link {
-    color: $white;
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
@@ -206,25 +217,26 @@ body.eleconar-style {
 
     &:hover,
     &.is-active {
-      color: $cyan-400;
+      color: $blue-400;
     }
   }
 
   &__cta {
-    background: $cyan-400;
-    color: #000000 !important;
+    background: $blue-600;
+    color: $white !important;
     font-weight: 700;
     font-size: 0.875rem;
-    padding: 0.5rem 1.125rem;
+    padding: 0.55rem 1.25rem;
     border-radius: 0.375rem;
     text-decoration: none;
     transition: all 0.2s ease;
     margin-left: 0.5rem;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
 
     &:hover {
-      background: $cyan-300;
+      background: $blue-500;
       transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgba($cyan-400, 0.3);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.5);
     }
   }
 
@@ -242,9 +254,9 @@ body.eleconar-style {
 
     &:hover,
     &.is-open {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: $cyan-400;
-      color: $cyan-400;
+      background: rgba(37, 99, 235, 0.2);
+      border-color: $blue-400;
+      color: $blue-400;
     }
 
     svg {
@@ -256,8 +268,8 @@ body.eleconar-style {
   }
 
   &__mobile {
-    background: $dark-900;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: $blue-900;
+    border-top: 1px solid rgba(59, 130, 246, 0.25);
     padding: 1rem 0;
 
     &[hidden] {
@@ -276,19 +288,19 @@ body.eleconar-style {
     transition: background 0.2s, color 0.2s;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.06);
-      color: $cyan-400;
+      background: rgba(37, 99, 235, 0.2);
+      color: $blue-300;
     }
 
     &--highlight {
       margin-top: 0.5rem;
-      background: $cyan-400;
-      color: #000000 !important;
+      background: $blue-600;
+      color: $white !important;
       text-align: center;
       font-weight: 700;
 
       &:hover {
-        background: $cyan-300;
+        background: $blue-500;
       }
     }
   }
@@ -316,7 +328,7 @@ body.eleconar-style {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: $dark-950;
+  background-color: $blue-950;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -327,16 +339,16 @@ body.eleconar-style {
   &__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba($dark-950, 0.7) 0%, rgba($dark-950, 0.85) 100%);
+    background: linear-gradient(180deg, rgba($blue-950, 0.78) 0%, rgba($blue-950, 0.92) 100%);
   }
 
   &__pattern {
     position: absolute;
     inset: 0;
-    opacity: 0.15;
+    opacity: 0.18;
     background-image:
-      linear-gradient(rgba($cyan-400, 0.2) 1px, transparent 1px),
-      linear-gradient(90deg, rgba($cyan-400, 0.2) 1px, transparent 1px);
+      linear-gradient(rgba(96, 165, 250, 0.25) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(96, 165, 250, 0.25) 1px, transparent 1px);
     background-size: 60px 60px;
   }
 
@@ -347,10 +359,10 @@ body.eleconar-style {
 
   &__badge {
     display: inline-block;
-    background: rgba($cyan-400, 0.12);
-    color: $cyan-400;
-    border: 1px solid rgba($cyan-400, 0.35);
-    padding: 0.35rem 1rem;
+    background: rgba(37, 99, 235, 0.2);
+    color: $blue-300;
+    border: 1px solid rgba(96, 165, 250, 0.4);
+    padding: 0.4rem 1.15rem;
     border-radius: 999px;
     font-size: 0.8125rem;
     font-weight: 700;
@@ -366,7 +378,7 @@ body.eleconar-style {
     line-height: 1.25;
     max-width: 58rem;
     margin: 0 auto 1.25rem;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
     letter-spacing: -0.02em;
   }
 
@@ -411,12 +423,12 @@ body.eleconar-style {
   border-radius: 0.625rem;
   text-decoration: none;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(8px);
 
   &:hover {
     transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
   }
 
   &__icon {
@@ -450,36 +462,47 @@ body.eleconar-style {
     letter-spacing: 0.04em;
   }
 
-  &--cyan {
-    background: rgba($cyan-400, 0.95);
-    color: #000000;
-    border: 1px solid lighten($cyan-400, 12%);
+  &--blue {
+    background: linear-gradient(145deg, #1d4ed8 0%, #1e40af 100%);
+    color: $white;
+    border: 1px solid rgba(147, 197, 253, 0.35);
 
     .hero-card__icon {
-      background: rgba(0, 0, 0, 0.15);
-      color: #000000;
+      background: rgba(255, 255, 255, 0.2);
+      color: $white;
     }
   }
 
   &--white {
-    background: rgba(255, 255, 255, 0.95);
-    color: #000000;
-    border: 1px solid #e5e7eb;
+    background: rgba(255, 255, 255, 0.96);
+    color: $blue-900;
+    border: 1px solid #e2e8f0;
 
     .hero-card__icon {
-      background: $gray-100;
-      color: $blue-800;
+      background: $blue-50;
+      color: $blue-600;
     }
   }
 
   &--dark {
-    background: rgba($dark-900, 0.92);
+    background: rgba($blue-900, 0.92);
     color: $white;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(96, 165, 250, 0.25);
 
     .hero-card__icon {
       background: rgba(255, 255, 255, 0.1);
-      color: $cyan-400;
+      color: $blue-300;
+    }
+  }
+
+  &--royal {
+    background: linear-gradient(145deg, #2563eb 0%, #1d4ed8 100%);
+    color: $white;
+    border: 1px solid rgba(191, 219, 254, 0.4);
+
+    .hero-card__icon {
+      background: rgba(255, 255, 255, 0.22);
+      color: $white;
     }
   }
 }
@@ -510,28 +533,28 @@ body.eleconar-style {
   }
 
   &--phone {
-    background: $cyan-400;
-    color: #000000;
-    border-color: lighten($cyan-400, 8%);
-    box-shadow: 0 8px 24px rgba($cyan-400, 0.3);
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: $white;
+    border-color: rgba(147, 197, 253, 0.4);
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
 
     &:hover {
-      background: $cyan-300;
+      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
       transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba($cyan-400, 0.45);
-      color: #000000;
+      box-shadow: 0 12px 28px rgba(37, 99, 235, 0.55);
+      color: $white;
     }
   }
 
   &--whatsapp {
     background: $whatsapp;
     color: $white;
-    box-shadow: 0 8px 24px rgba($whatsapp, 0.25);
+    box-shadow: 0 8px 24px rgba($whatsapp, 0.3);
 
     &:hover {
       background: $whatsapp-hover;
       transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba($whatsapp, 0.35);
+      box-shadow: 0 12px 28px rgba($whatsapp, 0.45);
       color: $white;
     }
   }
@@ -539,12 +562,12 @@ body.eleconar-style {
   &--outline {
     background: transparent;
     color: $white;
-    border-color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.45);
 
     &:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: $cyan-400;
-      color: $cyan-400;
+      background: rgba(37, 99, 235, 0.25);
+      border-color: $blue-400;
+      color: $blue-300;
     }
   }
 
@@ -572,7 +595,7 @@ body.eleconar-style {
 
   &--dark {
     position: relative;
-    background-color: $dark-950;
+    background-color: $blue-950;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -581,7 +604,7 @@ body.eleconar-style {
     &__overlay {
       position: absolute;
       inset: 0;
-      background: rgba($dark-950, 0.9);
+      background: rgba($blue-950, 0.92);
     }
   }
 
@@ -596,12 +619,12 @@ body.eleconar-style {
     &__overlay {
       position: absolute;
       inset: 0;
-      background: rgba($blue-900, 0.88);
+      background: rgba($blue-900, 0.9);
     }
   }
 
   &--contact-banner {
-    background: linear-gradient(135deg, $dark-950 0%, $blue-900 100%);
+    background: linear-gradient(135deg, $blue-950 0%, $blue-900 100%);
     color: $white;
   }
 }
@@ -639,7 +662,7 @@ body.eleconar-style {
     color: $white;
 
     &.section-title--underline::after {
-      background: $cyan-400;
+      background: $blue-400;
     }
   }
 }
@@ -683,8 +706,8 @@ body.eleconar-style {
     height: 22rem;
     object-fit: cover;
     border-radius: 0.75rem;
-    border: 4px solid $gray-200;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    border: 4px solid $blue-100;
+    box-shadow: 0 12px 32px rgba(16, 50, 110, 0.12);
   }
 
   &__content {
@@ -696,7 +719,7 @@ body.eleconar-style {
 
     .lead-text {
       font-size: 1.125rem;
-      color: $gray-900;
+      color: $blue-950;
     }
   }
 }
@@ -715,7 +738,7 @@ body.eleconar-style {
       display: block;
       font-size: 1.35rem;
       font-weight: 900;
-      color: $blue-800;
+      color: $blue-700;
     }
 
     &__sub {
@@ -727,7 +750,7 @@ body.eleconar-style {
 }
 
 /* ==========================================================================
-   Objectives & Tech Hex Badge 4.0
+   Objectives & Tech Badge 4.0
    ========================================================================== */
 .check-list {
   list-style: none;
@@ -744,7 +767,7 @@ body.eleconar-style {
       content: "✓";
       position: absolute;
       left: 0;
-      color: $cyan-400;
+      color: $blue-400;
       font-weight: 900;
       font-size: 1.125rem;
     }
@@ -758,7 +781,7 @@ body.eleconar-style {
     &::before {
       content: "◆";
       font-size: 0.9rem;
-      color: $cyan-400;
+      color: $blue-400;
     }
   }
 
@@ -781,13 +804,13 @@ body.eleconar-style {
     width: 10rem;
     height: 10rem;
     border-radius: 999px;
-    background: rgba($cyan-400, 0.15);
-    border: 3px solid $cyan-400;
+    background: rgba(37, 99, 235, 0.2);
+    border: 3px solid $blue-400;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 40px rgba($cyan-400, 0.3);
+    box-shadow: 0 0 45px rgba(37, 99, 235, 0.4);
   }
 
   &__num {
@@ -801,14 +824,14 @@ body.eleconar-style {
     font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 0.15em;
-    color: $cyan-400;
+    color: $blue-300;
     margin-top: 0.25rem;
   }
 
   &__ring {
     position: absolute;
     inset: 0;
-    border: 1px dashed rgba($cyan-400, 0.35);
+    border: 1px dashed rgba(96, 165, 250, 0.4);
     border-radius: 999px;
     animation: spinSlow 30s linear infinite;
   }
@@ -847,14 +870,14 @@ body.eleconar-style {
   border: 1px solid $gray-200;
   border-radius: 0.75rem;
   padding: 2.25rem 1.75rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 24px rgba(10, 31, 68, 0.06);
   position: relative;
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 
   &:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 16px 36px rgba(37, 99, 235, 0.12);
   }
 
   &__accent {
@@ -863,18 +886,18 @@ body.eleconar-style {
     left: 0;
     right: 0;
     height: 4px;
-    background: $cyan-500;
+    background: $blue-600;
 
     &--dark {
-      background: $blue-800;
+      background: $blue-900;
     }
   }
 
   &__icon {
     width: 3.25rem;
     height: 3.25rem;
-    background: rgba($blue-800, 0.08);
-    color: $blue-800;
+    background: $blue-50;
+    color: $blue-600;
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
@@ -911,12 +934,12 @@ body.eleconar-style {
   border: 1px solid $gray-200;
   border-radius: 0.625rem;
   padding: 1.75rem 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    border-color: $cyan-500;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+    border-color: $blue-500;
   }
 
   &__header {
@@ -936,7 +959,7 @@ body.eleconar-style {
   &__number {
     font-size: 1.25rem;
     font-weight: 900;
-    color: $cyan-500;
+    color: $blue-600;
     font-family: monospace;
   }
 
@@ -962,8 +985,8 @@ body.eleconar-style {
 }
 
 .feature-card {
-  background: rgba($dark-900, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba($blue-900, 0.88);
+  border: 1px solid rgba(96, 165, 250, 0.25);
   border-radius: 0.75rem;
   padding: 2rem 1.5rem;
   text-align: center;
@@ -971,7 +994,7 @@ body.eleconar-style {
 
   &:hover {
     transform: translateY(-4px);
-    border-color: $cyan-400;
+    border-color: $blue-400;
   }
 
   &__icon {
@@ -993,7 +1016,7 @@ body.eleconar-style {
 
     &--blue { background: $blue-600; }
     &--green { background: #16a34a; }
-    &--orange { background: #ea580c; }
+    &--orange { background: #d97706; }
   }
 
   &__title {
@@ -1012,8 +1035,8 @@ body.eleconar-style {
 }
 
 .repairs-scope {
-  background: rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(5, 14, 29, 0.65);
+  border: 1px solid rgba(96, 165, 250, 0.25);
   border-radius: 0.75rem;
   padding: 2rem;
   backdrop-filter: blur(8px);
@@ -1022,7 +1045,7 @@ body.eleconar-style {
     margin: 0 0 1.5rem;
     font-size: 1.15rem;
     font-weight: 800;
-    color: $cyan-400;
+    color: $blue-300;
     text-align: center;
   }
 
@@ -1046,7 +1069,7 @@ body.eleconar-style {
       width: 0.5rem;
       height: 0.5rem;
       border-radius: 999px;
-      background: $cyan-400;
+      background: $blue-400;
       flex-shrink: 0;
     }
   }
@@ -1082,7 +1105,7 @@ body.eleconar-style {
 
   &:hover {
     transform: translateY(-4px);
-    filter: brightness(1.1);
+    filter: brightness(1.12);
   }
 
   &__title {
@@ -1103,7 +1126,7 @@ body.eleconar-style {
   &--schneider { background: #059669; }
   &--mitsubishi { background: #1e3a8a; }
   &--delta { background: #c2410c; }
-  &--abb { background: #374151; }
+  &--abb { background: #334155; }
 }
 
 /* ==========================================================================
@@ -1125,14 +1148,15 @@ body.eleconar-style {
 }
 
 .contact-box {
-  background: rgba($white, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(96, 165, 250, 0.25);
   border-radius: 0.625rem;
   padding: 1.25rem 1.5rem;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background 0.2s;
 
   &:hover {
-    border-color: $cyan-400;
+    border-color: $blue-400;
+    background: rgba(37, 99, 235, 0.15);
   }
 
   &__icon {
@@ -1140,7 +1164,7 @@ body.eleconar-style {
     height: 2rem;
     max-width: 2rem;
     max-height: 2rem;
-    color: $cyan-400;
+    color: $blue-300;
     margin-bottom: 0.5rem;
 
     svg {
@@ -1152,7 +1176,7 @@ body.eleconar-style {
   h4 {
     margin: 0 0 0.25rem;
     font-size: 0.9rem;
-    color: $cyan-400;
+    color: $blue-300;
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -1165,7 +1189,7 @@ body.eleconar-style {
     transition: color 0.2s;
 
     &:hover {
-      color: $cyan-400;
+      color: $blue-300;
     }
   }
 
@@ -1183,12 +1207,12 @@ body.eleconar-style {
 }
 
 .contact-action-card {
-  background: rgba($dark-950, 0.7);
-  border: 2px solid rgba($cyan-400, 0.4);
+  background: rgba($blue-950, 0.85);
+  border: 2px solid rgba(59, 130, 246, 0.45);
   border-radius: 0.875rem;
   padding: 2.5rem;
   backdrop-filter: blur(10px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 16px 40px rgba(5, 14, 29, 0.5);
 
   h3 {
     margin: 0 0 1rem;
@@ -1215,10 +1239,10 @@ body.eleconar-style {
    Footer
    ========================================================================== */
 .site-footer {
-  background: $dark-950;
+  background: $blue-950;
   color: rgba(255, 255, 255, 0.8);
   padding: 4rem 0 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
 
   &__grid {
     display: grid;
@@ -1259,7 +1283,7 @@ body.eleconar-style {
   &__heading {
     font-size: 1rem;
     font-weight: 800;
-    color: $cyan-400;
+    color: $blue-300;
     margin: 0 0 1.25rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -1286,7 +1310,7 @@ body.eleconar-style {
     transition: color 0.2s;
 
     &:hover {
-      color: $cyan-400;
+      color: $blue-300;
     }
   }
 
@@ -1296,7 +1320,7 @@ body.eleconar-style {
     transition: color 0.2s;
 
     &:hover {
-      color: $cyan-400;
+      color: $blue-300;
     }
   }
 
