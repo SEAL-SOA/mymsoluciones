@@ -7,8 +7,8 @@ title: "MyM Soluciones"
 title_separator: "|"
 subtitle: "Ingeniería y Mantenimiento Industrial"
 description: "Servicios de mantenimiento electromecánico, automatización industrial, programación de PLCs, reparación electrónica y líneas de inyección."
-url: "https://mymsoluciones.github.io"
-baseurl: ""
+url: "https://seal-soa.github.io"
+baseurl: "/mymsoluciones"
 logo: "/assets/images/logo.svg"
 
 # Contact Information
