@@ -1,0 +1,77 @@
+<div class="top-bar">
+  <div class="container">
+    <a href="mailto:{{ site.email }}" class="top-bar__link">
+      <svg class="top-bar__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+      <span class="top-bar__text-full">{{ site.email }}</span>
+      <span class="top-bar__text-short">Email</span>
+    </a>
+    <a href="tel:{{ site.phone_link }}" class="top-bar__link top-bar__link--phone">
+      <svg class="top-bar__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+      <span class="top-bar__text-full">{{ site.phone }}</span>
+      <span class="top-bar__text-short">Llamar</span>
+    </a>
+  </div>
+</div>
+
+<div class="site-masthead">
+  <div class="container">
+    <div class="site-masthead__inner">
+      <a href="{{ '/' | relative_url }}" class="site-masthead__logo">
+        {% if site.logo %}
+          <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
+        {% else %}
+          <span class="site-masthead__title">{{ site.title }}</span>
+        {% endif %}
+      </a>
+
+      <button class="site-masthead__toggle" id="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+
+      <nav class="site-masthead__nav" id="site-nav" aria-label="Principal">
+        {% for link in site.data.navigation.main %}
+          <a href="{{ link.url | relative_url }}" class="site-masthead__link{% if forloop.first %} is-active{% endif %}">{{ link.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+
+  <div class="site-masthead__mobile" id="mobile-menu" hidden>
+    {% for link in site.data.navigation.main %}
+      <a href="{{ link.url | relative_url }}" class="site-masthead__mobile-link">{{ link.title }}</a>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var btn = document.getElementById('mobile-menu-btn');
+  var menu = document.getElementById('mobile-menu');
+  if (!btn || !menu) return;
+
+  btn.addEventListener('click', function () {
+    var open = menu.hasAttribute('hidden');
+    if (open) {
+      menu.removeAttribute('hidden');
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      menu.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.querySelectorAll('.site-masthead__link, .site-masthead__mobile-link').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var href = link.getAttribute('href');
+      if (!href || href.charAt(0) !== '#') return;
+      e.preventDefault();
+      var target = document.querySelector(href);
+      if (!target) return;
+      menu.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+      var offset = document.querySelector('.site-masthead') ? document.querySelector('.site-masthead').offsetHeight + 40 : 80;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+    });
+  });
+});
+</script>

@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80" role="img" aria-label="MyM Soluciones logo">
-  <rect width="320" height="80" rx="8" fill="#0b2b3a" />
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="20" fill="#ffffff">MyM Soluciones</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="48" viewBox="0 0 200 48" role="img" aria-label="MyM Soluciones">
+  <rect x="0" y="4" width="28" height="3" fill="#22d3ee"/>
+  <text x="0" y="32" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#ffffff">MyM</text>
+  <text x="58" y="32" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#22d3ee">Soluciones</text>
+  <text x="0" y="44" font-family="Inter, Arial, sans-serif" font-size="9" font-weight="500" fill="#9ca3af" letter-spacing="0.08em">INGENIERÍA INDUSTRIAL</text>
 </svg>

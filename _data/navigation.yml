@@ -1,0 +1,11 @@
+main:
+  - title: "Home"
+    url: "/#hero"
+  - title: "Quiénes Somos"
+    url: "/#quienes-somos"
+  - title: "Servicios"
+    url: "/#servicios"
+  - title: "Socios"
+    url: "/#socios"
+  - title: "Contacto"
+    url: "/#contacto"

@@ -1,84 +1,162 @@
 ---
-layout: default
-title: MyM Soluciones - Mantenimiento
+layout: home
+title: MyM Soluciones - Mantenimiento y Automatización Industrial
+permalink: /
 ---
 
-<main class="page-content">
-    <div class="hero-logo">
-        <img src="{{ site.logo }}" alt="Logo MyM Soluciones" />
+<section id="hero" class="hero" style="background-image: url('{{ '/assets/images/hero-industrial.jpg' | relative_url }}');">
+  <div class="hero__overlay"></div>
+  <div class="hero__pattern" aria-hidden="true"></div>
+  <div class="container hero__content">
+    <h1>Desarrollamos tecnologías aplicadas a la integración de sistemas de control, automatización de procesos y electrónica industrial</h1>
+    <a href="tel:{{ site.phone_link }}" class="btn btn--phone">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+      {{ site.phone }}
+    </a>
+
+    <div class="hero-cards">
+      <a href="#servicios" class="hero-card hero-card--cyan">
+        <div class="hero-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H7C5.89 1 5 1.89 5 3V21C5 22.11 5.89 23 7 23H17C18.11 23 19 22.11 19 21V9H21ZM17 19H7V17H17V19ZM17 15H7V13H17V15ZM17 11H7V9H17V11Z"/></svg>
+        </div>
+        <h3>Automatización<br>Industrial</h3>
+      </a>
+      <a href="#servicios" class="hero-card hero-card--white">
+        <div class="hero-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9,2V8H11V11H5C3.89,11 3,11.89 3,13V19C3,20.11 3.89,21 5,21H19C20.11,21 21,20.11 21,19V13C21,11.89 20.11,11 19,11H13V8H15V2H9M11,4H13V6H11V4M5,13H19V19H5V13M8,15V17H10V15H8M12,15V17H14V15H12M16,15V17H18V15H16Z"/></svg>
+        </div>
+        <h3>Electrónica<br>Industrial</h3>
+      </a>
+      <a href="#servicios" class="hero-card hero-card--dark">
+        <div class="hero-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12,2A2,2 0 0,1 14,4C14,4.74 13.6,5.39 13,5.73V7H14A7,7 0 0,1 21,14H22A1,1 0 0,1 23,15V18A1,1 0 0,1 22,19H21V20A2,2 0 0,1 19,22H5A2,2 0 0,1 3,20V19H2A1,1 0 0,1 1,18V15A1,1 0 0,1 2,14H3A7,7 0 0,1 10,7H11V5.73C10.4,5.39 10,4.74 10,4A2,2 0 0,1 12,2M7.5,13A2.5,2.5 0 0,0 5,15.5A2.5,2.5 0 0,0 7.5,18A2.5,2.5 0 0,0 10,15.5A2.5,2.5 0 0,0 7.5,13M16.5,13A2.5,2.5 0 0,0 14,15.5A2.5,2.5 0 0,0 16.5,18A2.5,2.5 0 0,0 19,15.5A2.5,2.5 0 0,0 16.5,13Z"/></svg>
+        </div>
+        <h3>Mantenimiento<br>Industrial</h3>
+      </a>
+      <a href="#servicios" class="hero-card hero-card--cyan">
+        <div class="hero-card__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z"/></svg>
+        </div>
+        <h3>Servicios<br>Técnicos</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="quienes-somos" class="section section--white">
+  <div class="container">
+    <div class="split">
+      <div class="split__media">
+        <img src="{{ '/assets/images/hero-industrial.jpg' | relative_url }}" alt="Automatización industrial MyM Soluciones">
+      </div>
+      <div class="split__content">
+        <h2 class="section-title section-title--underline">{{ site.title | upcase }}</h2>
+        <p>En {{ site.title }} desarrollamos soluciones aplicadas a la integración de sistemas de control, automatización de procesos y mantenimiento industrial. Nos especializamos en asistencia técnica, puesta a punto de equipos y servicios para plantas de producción.</p>
+        <p>Nuestro equipo de ingeniería y servicio técnico convierte a {{ site.title }} en un socio estratégico para la manufactura y el desarrollo tecnológico de su empresa.</p>
+        <h3>Principales Objetivos</h3>
+        <ul class="check-list">
+          <li>Actualización de tecnología</li>
+          <li>Migraciones de sistemas automáticos</li>
+          <li>Proyectos llave en mano</li>
+          <li>Service a planta</li>
+          <li>Centro de reparación</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" class="section section--gray">
+  <div class="container">
+    <h2 class="section-title section-title--center">Automatización Industrial</h2>
+    <p class="section-lead">Garantizamos el óptimo funcionamiento de la maquinaria y los sistemas de nuestros clientes, ofreciendo distintos niveles de soporte y una amplia variedad de soluciones.</p>
+
+    <div class="feature-grid">
+      <article class="feature-box">
+        <h3>Control y Automatización</h3>
+        <p>Sistemas de control PLC, drives y process control con las mejores marcas del mercado.</p>
+      </article>
+      <article class="feature-box">
+        <h3>Reparaciones Especializadas</h3>
+        <p>Servicio especializado en reparación electrónica de equipo industrial con garantía de 90 días.</p>
+      </article>
+      <article class="feature-box">
+        <h3>Proyectos Integrales</h3>
+        <p>Retrofitting, migraciones de sistemas, SCADA e implementación de Industria 4.0.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container">
+    <h2 class="section-title section-title--center section-title--light">Reparaciones Electrónicas</h2>
+    <p class="section-lead section-lead--light">Servicio especializado en reparación electrónica de equipo industrial</p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>Diagnóstico Gratuito</h3>
+        <p>Revisión y diagnóstico sin costo</p>
+      </div>
+      <div class="stat-card">
+        <h3>Garantía 90 Días</h3>
+        <p>Garantía por escrito</p>
+      </div>
+      <div class="stat-card">
+        <h3>Todas las Marcas</h3>
+        <p>Equipos industriales</p>
+      </div>
     </div>
 
-    <section class="hero-text">
-        <h1>MyM Soluciones</h1>
-        <p>Servicios de mantenimiento especializados para plantas industriales.</p>
-    </section>
+    <ul class="bullet-list bullet-list--light">
+      <li>Fuentes de CA/CC industriales contra fallas intrínsecas de fábrica</li>
+      <li>Variadores genéricos de velocidad de la mayoría de fabricantes</li>
+      <li>Reparación de tableros o retrofit de equipos de automatización</li>
+    </ul>
+  </div>
+</section>
 
-    <section id="servicios" class="service-cards">
-        <article class="service-card">
-    ---
-    layout: default
-    title: MyM Soluciones - Mantenimiento
-    ---
+<section id="socios" class="section section--white">
+  <div class="container">
+    <h2 class="section-title section-title--center">Socios Tecnológicos</h2>
+    <p class="section-lead">Trabajamos con las marcas líderes del sector</p>
+    <div class="partners-grid">
+      <span class="partner-badge">SIEMENS</span>
+      <span class="partner-badge">ALLEN-BRADLEY</span>
+      <span class="partner-badge">SCHNEIDER ELECTRIC</span>
+      <span class="partner-badge">MITSUBISHI ELECTRIC</span>
+      <span class="partner-badge">DELTA</span>
+    </div>
+  </div>
+</section>
 
-    <header class="site-header">
-        <div class="header-inner">
-            <div class="logo-wrap">
-                <img src="/assets/images/logo.svg" alt="MyM Soluciones logo" />
-            </div>
-            <nav class="top-nav">
-                <a href="#servicios">Servicios</a>
-                <a href="#socios">Socios</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
+<section id="contacto" class="section section--contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <h2 class="section-title section-title--light">Service</h2>
+        <div class="contact-item">
+          <h4>Teléfono / WhatsApp</h4>
+          <p><a href="tel:{{ site.phone_link }}">{{ site.phone }}</a></p>
         </div>
-    </header>
-
-    <section id="hero" class="hero">
-        <div class="hero-inner">
-            <h1>Desarrollamos tecnologías para el control y la automatización industrial</h1>
-            <p>Integración de sistemas de control, automatización de procesos y electrónica industrial para plantas de producción.</p>
-            <div class="hero-ctas">
-                <a class="btn primary" href="#contacto">Contactar</a>
-                <a class="btn ghost" href="#servicios">Nuestros servicios</a>
-            </div>
+        <div class="contact-item">
+          <h4>Email</h4>
+          <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
         </div>
-    </section>
-
-    <main class="page-content">
-        <section id="servicios" class="service-cards">
-            <article class="service-card">
-                <h3>Mantenimiento preventivo</h3>
-                <p>Planificación y ejecución para evitar paros no programados y prolongar la vida útil de tus equipos industriales.</p>
-            </article>
-
-            <article class="service-card">
-                <h3>Automatizaciones</h3>
-                <p>Implementación y mejora de sistemas automáticos para optimizar procesos, reducir tiempos y aumentar precisión operacional.</p>
-            </article>
-
-            <article class="service-card">
-                <h3>Líneas de inyección de plástico</h3>
-                <p>Servicio técnico especializado en mantenimiento y puesta a punto de líneas de inyección para asegurar producción continua y de calidad.</p>
-            </article>
-        </section>
-
-        <section id="socios" class="partners">
-            <h2>Trabajamos con las mejores marcas</h2>
-            <div class="partner-list">
-                <span>SIEMENS</span>
-                <span>ALLEN-BRADLEY</span>
-                <span>DELTA</span>
-                <span>MITSUBISHI</span>
-                <span>SCHNEIDER</span>
-            </div>
-        </section>
-
-        <section id="contacto" class="contact">
-            <h2>Contacto</h2>
-            <p>Escribinos a <a href="mailto:info@mymsoluciones.example">info@mymsoluciones.example</a> o por WhatsApp al <a href="https://wa.me/5491123456789">+54 9 11 2345-6789</a>.</p>
-            <p>Dirección: Dorrego 80, Merlo, Provincia de Buenos Aires</p>
-        </section>
-    </main>
-
-    <!-- Botón de WhatsApp Flotante -->
-    <a href="https://wa.me" class="whatsapp-btn" target="_blank">Contactar por WhatsApp</a>
+        <div class="contact-item">
+          <h4>Dirección</h4>
+          <p>{{ site.address }}</p>
+        </div>
+      </div>
+      <div class="contact-form-card">
+        <h2>Formulario de Consultas</h2>
+        <p class="contact-form-card__lead">Comuníquese con nosotros</p>
+        <p>Contáctenos a través de WhatsApp o correo electrónico para obtener asistencia inmediata con sus necesidades de automatización industrial.</p>
+        <div class="contact-form-card__actions">
+          <a href="https://wa.me/{{ site.whatsapp }}" class="btn btn--whatsapp" target="_blank" rel="noopener">WhatsApp: {{ site.phone }}</a>
+          <a href="mailto:{{ site.email }}" class="btn btn--outline">{{ site.email }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
