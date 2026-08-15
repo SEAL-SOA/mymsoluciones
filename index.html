@@ -1,33 +1,459 @@
 ---
-layout: splash
-author_profile: false # Esto quita la foto de perfil de la izquierda
-header:
-  overlay_image: /assets/images/tu-imagen-principal.jpg
-  overlay_filter: 0.5 # Oscurece la imagen para que se lea el texto
-  caption: "Foto de [Nombre]"
-  excerpt: "Soluciones a medida para tu emprendimiento."
-  actions:
-    - label: "Ver Servicios"
-      url: "/#servicios"
-
-feature_row:
-  - image_path: /assets/images/servicio1.png
-    alt: "Servicio 1"
-    title: "Automatización"
-    excerpt: "Descripción corta del servicio que ofreces."
-  - image_path: /assets/images/servicio2.png
-    alt: "Servicio 2"
-    title: "Mantenimiento"
-    excerpt: "Descripción de otro servicio clave."
-  - image_path: /assets/images/servicio3.png
-    alt: "Servicio 3"
-    title: "Consultoría"
-    excerpt: "Cómo ayudas a tus clientes."
+layout: home
+title: "MyM Soluciones | Mantenimiento Industrial y Automatización"
 ---
 
-## Bienvenidos a MyM Soluciones
-Empresa dedicada a brindar soluciones para el mantenimiento electromecanico de equipos industriales, maquinaria y sistemas de automatización. 
-También ofrecemos servicios de asesoramiento y consultoría para optimizar procesos y mejorar la eficiencia de tus operaciones.
+<!-- Hero Section -->
+<section id="hero" class="hero" style="background-image: url('{{ "/assets/images/hero-industrial.jpg" | relative_url }}');">
+  <div class="hero__overlay"></div>
+  <div class="hero__pattern"></div>
 
-<div id="servicios"></div>
-{% include feature_row %}
+  <div class="container hero__content">
+    <div class="hero__text-wrapper">
+      <span class="hero__badge">Soluciones de Ingeniería Industrial</span>
+      <h1 class="hero__title">
+        Desarrollamos e implementamos soluciones integrales en automatización industrial, mantenimiento electromecánico y electrónica de potencia
+      </h1>
+      <p class="hero__subtitle">
+        Optimizamos la disponibilidad y el rendimiento de su planta industrial con asistencia técnica especializada y servicio 24/7.
+      </p>
+
+      <div class="hero__actions">
+        <a href="tel:{{ site.phone_link }}" class="btn btn--phone" aria-label="Llamar a MyM Soluciones">
+          <svg class="btn__icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          <span class="btn__text">{{ site.phone }}</span>
+        </a>
+        <a href="https://wa.me/{{ site.whatsapp }}?text=Hola%2C%20quisiera%20solicitar%20un%20presupuesto%20o%20asistencia%20t%C3%A9cnica." target="_blank" rel="noopener" class="btn btn--whatsapp">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.515z"/>
+          </svg>
+          <span class="btn__text">WhatsApp Directo</span>
+        </a>
+      </div>
+
+      <!-- Quick Access Service Cards -->
+      <div class="hero-cards">
+        <a href="#automatizacion" class="hero-card hero-card--cyan">
+          <div class="hero-card__icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H7C5.89 1 5 1.89 5 3V21C5 22.11 5.89 23 7 23H17C18.11 23 19 22.11 19 21V9H21ZM17 19H7V17H17V19ZM17 15H7V13H17V15ZM17 11H7V9H17V11Z"/>
+            </svg>
+          </div>
+          <h3>AUTOMATIZACIÓN<br>INDUSTRIAL</h3>
+        </a>
+
+        <a href="#servicios" class="hero-card hero-card--white">
+          <div class="hero-card__icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9,2V8H11V11H5C3.89,11 3,11.89 3,13V19C3,20.11 3.89,21 5,21H19C20.11,21 21,20.11 21,19V13C21,11.89 20.11,11 19,11H13V8H15V2H9M11,4H13V6H11V4M5,13H19V19H5V13M8,15V17H10V15H8M12,15V17H14V15H12M16,15V17H18V15H16Z"/>
+            </svg>
+          </div>
+          <h3>MANTENIMIENTO<br>ELECTROMECÁNICO</h3>
+        </a>
+
+        <a href="#servicios" class="hero-card hero-card--dark">
+          <div class="hero-card__icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12,2A2,2 0 0,1 14,4C14,4.74 13.6,5.39 13,5.73V7H14A7,7 0 0,1 21,14H22A1,1 0 0,1 23,15V18A1,1 0 0,1 22,19H21V20A2,2 0 0,1 19,22H5A2,2 0 0,1 3,20V19H2A1,1 0 0,1 1,18V15A1,1 0 0,1 2,14H3A7,7 0 0,1 10,7H11V5.73C10.4,5.39 10,4.74 10,4A2,2 0 0,1 12,2M7.5,13A2.5,2.5 0 0,0 5,15.5A2.5,2.5 0 0,0 7.5,18A2.5,2.5 0 0,0 10,15.5A2.5,2.5 0 0,0 7.5,13M16.5,13A2.5,2.5 0 0,0 14,15.5A2.5,2.5 0 0,0 16.5,18A2.5,2.5 0 0,0 19,15.5A2.5,2.5 0 0,0 16.5,13Z"/>
+            </svg>
+          </div>
+          <h3>LÍNEAS DE PRODUCCIÓN<br>& INYECCIÓN</h3>
+        </a>
+
+        <a href="#reparaciones" class="hero-card hero-card--cyan">
+          <div class="hero-card__icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.22,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.22,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.68 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z"/>
+            </svg>
+          </div>
+          <h3>REPARACIONES<br>ELECTRÓNICAS</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Company Section: Quiénes Somos -->
+<section id="quienes-somos" class="section section--white">
+  <div class="container">
+    <div class="split">
+      <div class="split__media">
+        <img src="{{ "/assets/images/industria-40.jpg" | relative_url }}" alt="Ingeniería y Mantenimiento Industrial MyM Soluciones" loading="lazy">
+      </div>
+      <div class="split__content">
+        <h2 class="section-title section-title--underline">MYM SOLUCIONES</h2>
+        <p class="lead-text">
+          En <strong>MyM Soluciones</strong> brindamos servicios profesionales de ingeniería aplicados a la automatización de procesos, el mantenimiento electromecánico preventivo y correctivo, y la reparación de equipamiento industrial.
+        </p>
+        <p>
+          Nos especializamos en asistir a plantas industriales para maximizar el tiempo operativo de sus líneas de producción, reducir paradas imprevistas y actualizar sistemas mediante tecnología de punta (PLCs, HMIs, variadores y celdas de inyección).
+        </p>
+        <p>
+          Nuestro compromiso técnico y rapidez de respuesta convierten a MyM Soluciones en el socio estratégico ideal para la continuidad y evolución de su industria.
+        </p>
+        <div class="company-highlights">
+          <div class="highlight-item">
+            <span class="highlight-item__title">+10 Años</span>
+            <span class="highlight-item__sub">Experiencia en planta</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-item__title">24/7</span>
+            <span class="highlight-item__sub">Soporte y urgencias</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-item__title">100%</span>
+            <span class="highlight-item__sub">Garantía de servicio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Objectives Section -->
+<section id="objetivos" class="section section--objectives" style="background-image: url('{{ "/assets/images/hero-industrial.jpg" | relative_url }}');">
+  <div class="section--objectives__overlay"></div>
+  <div class="container relative-z">
+    <div class="split split--center">
+      <div class="split__content text-white">
+        <h2 class="section-title section-title--light">Principales Objetivos</h2>
+        <p class="section-lead--left text-cyan-light">
+          Acompañamos a nuestros clientes en cada etapa con soluciones confiables, precisas y escalables:
+        </p>
+        <ul class="check-list check-list--large">
+          <li><strong>Actualización y modernización de tecnología</strong> en maquinaria existente.</li>
+          <li><strong>Migraciones de sistemas automáticos</strong> y reemplazo de PLCs descontinuados.</li>
+          <li><strong>Proyectos llave en mano</strong> desde el diseño eléctrico hasta la puesta en marcha.</li>
+          <li><strong>Service y mantenimiento a planta</strong> con planes preventivos programados.</li>
+          <li><strong>Centro de diagnóstico y reparación</strong> de placas, variadores y fuentes.</li>
+        </ul>
+      </div>
+
+      <div class="split__media flex-center">
+        <div class="tech-badge-40">
+          <div class="tech-badge-40__circle">
+            <span class="tech-badge-40__num">4.0</span>
+            <span class="tech-badge-40__label">INDUSTRIA</span>
+          </div>
+          <div class="tech-badge-40__ring"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Industrial Automation Section -->
+<section id="automatizacion" class="section section--white">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="section-title section-title--underline">Automatización Industrial</h2>
+      <p class="section-lead">
+        Garantizamos el funcionamiento óptimo de sus sistemas productivos mediante el desarrollo e integración de plataformas de control de última generación.
+      </p>
+    </div>
+
+    <div class="cards-grid cards-grid--3">
+      <!-- Card 1 -->
+      <div class="service-box">
+        <div class="service-box__accent"></div>
+        <div class="service-box__icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+        </div>
+        <h3 class="service-box__title">Control & Automatización PLC</h3>
+        <p class="service-box__text">
+          Programación, configuración y puesta en marcha de controladores lógicos programables (PLCs), pantallas táctiles HMI y sistemas de supervisión SCADA con las principales marcas del mercado.
+        </p>
+        <ul class="check-list check-list--compact">
+          <li>Siemens Simatic S7-1200 / S7-1500 / TIA Portal</li>
+          <li>Rockwell Automation / Allen-Bradley Studio 5000</li>
+          <li>Schneider Electric EcoStruxure / Modicon</li>
+          <li>Delta Automation ISPSoft / DOPSoft</li>
+        </ul>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-box">
+        <div class="service-box__accent service-box__accent--dark"></div>
+        <div class="service-box__icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+          </svg>
+        </div>
+        <h3 class="service-box__title">Mantenimiento & Service a Planta</h3>
+        <p class="service-box__text">
+          Planes de mantenimiento preventivo, predictivo y correctivo para minimizar tiempos muertos y prolongar la vida útil de sus equipos electromecánicos.
+        </p>
+        <ul class="check-list check-list--compact">
+          <li>Revisión de tableros de potencia y control</li>
+          <li>Ajuste de accionamientos, servomotores y encoders</li>
+          <li>Termografía infrarroja y análisis de fallas</li>
+          <li>Guardia técnica y atención de emergencias</li>
+        </ul>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-box">
+        <div class="service-box__accent"></div>
+        <div class="service-box__icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+          </svg>
+        </div>
+        <h3 class="service-box__title">Retrofitting & Tableros Eléctricos</h3>
+        <p class="service-box__text">
+          Modernización integral de maquinarias obsoletas reemplazando relés o controles antiguos por sistemas automatizados seguros bajo normativa vigente.
+        </p>
+        <ul class="check-list check-list--compact">
+          <li>Armado y cableado de tableros eléctricos certificados</li>
+          <li>Adecuación de circuitos de parada de emergencia</li>
+          <li>Migración de accionamientos mecánicos a variadores</li>
+          <li>Planos eléctricos y documentación técnica completa</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Electronic Repairs Section -->
+<section id="reparaciones" class="section section--dark" style="background-image: url('{{ "/assets/images/industria-40.jpg" | relative_url }}');">
+  <div class="section--dark__overlay"></div>
+  <div class="container relative-z">
+    <div class="section-header text-center">
+      <h2 class="section-title section-title--light section-title--underline">Reparaciones Electrónicas</h2>
+      <p class="section-lead section-lead--light">
+        Servicio especializado en diagnóstico y reparación a nivel componente para equipamiento industrial
+      </p>
+    </div>
+
+    <!-- 3 Highlight Features -->
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-card__icon feature-card__icon--blue">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">Diagnóstico Rápido</h3>
+        <p class="feature-card__desc">Revisión en banco de pruebas con informe técnico detallado del estado del equipo.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-card__icon feature-card__icon--green">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">Garantía de 90 Días</h3>
+        <p class="feature-card__desc">Garantía escrita por cada trabajo de reparación y sustitución de componentes.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-card__icon feature-card__icon--orange">
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <h3 class="feature-card__title">Cobertura Multimarca</h3>
+        <p class="feature-card__desc">Reparación de equipos industriales nacionales e importados de todas las marcas.</p>
+      </div>
+    </div>
+
+    <!-- Equipment Scope List -->
+    <div class="repairs-scope">
+      <div class="repairs-scope__inner">
+        <h4 class="repairs-scope__heading">Equipamiento comúnmente intervenido:</h4>
+        <div class="repairs-scope__grid">
+          <div class="repairs-scope__item">
+            <span class="dot-accent"></span>
+            <span>Variadores de velocidad (VFD) y servodrives</span>
+          </div>
+          <div class="repairs-scope__item">
+            <span class="dot-accent"></span>
+            <span>Fuentes de alimentación conmutadas e industriales</span>
+          </div>
+          <div class="repairs-scope__item">
+            <span class="dot-accent"></span>
+            <span>Módulos de E/S, PLCs y controladores numéricos</span>
+          </div>
+          <div class="repairs-scope__item">
+            <span class="dot-accent"></span>
+            <span>Paneles de operador HMI y pantallas industriales táctiles</span>
+          </div>
+          <div class="repairs-scope__item">
+            <span class="dot-accent"></span>
+            <span>Placas electrónicas de máquinas inyectoras y extrusoras</span>
+          </div>
+          <div class="repairs-scope__item">
+            <span class="dot-accent"></span>
+            <span>Tarjetas de control y reguladores de temperatura / presión</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Specialized Services: Inyección & Planta -->
+<section id="servicios" class="section section--gray">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="section-title section-title--underline">Servicios a Planta & Líneas de Inyección</h2>
+      <p class="section-lead">
+        Soluciones integrales de mantenimiento para maquinaria pesada, líneas de inyección de plástico y automatismos industriales.
+      </p>
+    </div>
+
+    <div class="cards-grid cards-grid--4">
+      <div class="service-tile">
+        <div class="service-tile__header">
+          <span class="service-tile__number">01</span>
+          <h4>Líneas de Inyección</h4>
+        </div>
+        <p>Mantenimiento integral electromecánico e hidráulico para máquinas inyectoras, sopladoras y periféricos (cargadores, atemperadores, robots cartesianos).</p>
+      </div>
+
+      <div class="service-tile">
+        <div class="service-tile__header">
+          <span class="service-tile__number">02</span>
+          <h4>Montajes & Cableados</h4>
+        </div>
+        <p>Tendido de bandejas portacables, acometidas eléctricas de fuerza motriz, conexión de motores, sensores de proximidad, encoders y finales de carrera.</p>
+      </div>
+
+      <div class="service-tile">
+        <div class="service-tile__header">
+          <span class="service-tile__number">03</span>
+          <h4>Optimización de Procesos</h4>
+        </div>
+        <p>Ajuste de ciclos de trabajo, sincronización de ejes y automatización de procesos para incrementar la productividad y disminuir el desperdicio.</p>
+      </div>
+
+      <div class="service-tile">
+        <div class="service-tile__header">
+          <span class="service-tile__number">04</span>
+          <h4>Asistencia Técnica In Situ</h4>
+        </div>
+        <p>Guardia técnica especializada con instrumental de medición avanzado para detección rápida de averías mecánicas, eléctricas y electrónicas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brand / Tech Partners Section -->
+<section id="marcas" class="section section--white">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="section-title section-title--underline">Marcas & Socios Tecnológicos</h2>
+      <p class="section-lead">
+        Trabajamos e integramos tecnología de los principales fabricantes mundiales de automatización
+      </p>
+    </div>
+
+    <div class="brand-showcase">
+      <div class="brand-card brand-card--siemens">
+        <span class="brand-card__title">SIEMENS</span>
+        <span class="brand-card__sub">S7-1200 / 1500 / Sinamics</span>
+      </div>
+
+      <div class="brand-card brand-card--allen-bradley">
+        <span class="brand-card__title">ALLEN-BRADLEY</span>
+        <span class="brand-card__sub">Rockwell Automation / PowerFlex</span>
+      </div>
+
+      <div class="brand-card brand-card--schneider">
+        <span class="brand-card__title">SCHNEIDER</span>
+        <span class="brand-card__sub">Altivar / Modicon / Magelis</span>
+      </div>
+
+      <div class="brand-card brand-card--mitsubishi">
+        <span class="brand-card__title">MITSUBISHI</span>
+        <span class="brand-card__sub">Electric / MELSEC / FR-D</span>
+      </div>
+
+      <div class="brand-card brand-card--delta">
+        <span class="brand-card__title">DELTA</span>
+        <span class="brand-card__sub">DVP / ASDA / DOP</span>
+      </div>
+
+      <div class="brand-card brand-card--abb">
+        <span class="brand-card__title">ABB</span>
+        <span class="brand-card__sub">Drives / Robot Automation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact & Quote Section -->
+<section id="contacto" class="section section--contact-banner">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="section-title section-title--light section-title--underline">Contacto & Consultas</h2>
+      <p class="section-lead section-lead--light">
+        Comuníquese con nosotros para recibir asesoramiento técnico personalizado o coordinar una visita a su planta
+      </p>
+    </div>
+
+    <div class="contact-deck">
+      <!-- Contact Info Cards -->
+      <div class="contact-cards">
+        <div class="contact-box">
+          <div class="contact-box__icon">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+          </div>
+          <h4>Teléfono / WhatsApp</h4>
+          <a href="tel:{{ site.phone_link }}" class="contact-box__link">{{ site.phone }}</a>
+        </div>
+
+        <div class="contact-box">
+          <div class="contact-box__icon">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+            </svg>
+          </div>
+          <h4>Correo Electrónico</h4>
+          <a href="mailto:{{ site.email }}" class="contact-box__link">{{ site.email }}</a>
+        </div>
+
+        <div class="contact-box">
+          <div class="contact-box__icon">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <h4>Ubicación & Cobertura</h4>
+          <p class="contact-box__text">{{ site.address }}<br><small>Atención en Buenos Aires, GBA e Interior</small></p>
+        </div>
+      </div>
+
+      <!-- Action Box -->
+      <div class="contact-action-card">
+        <h3>¿Necesita asistencia técnica o cotización?</h3>
+        <p>
+          Envíenos su consulta por WhatsApp o correo electrónico describiendo su necesidad o falla para recibir una respuesta inmediata de nuestro equipo de ingeniería.
+        </p>
+        <div class="contact-action-card__buttons">
+          <a href="https://wa.me/{{ site.whatsapp }}?text=Hola%2C%20necesito%20asistencia%20t%C3%A9cnica%20para%20mi%20planta%20industrial." target="_blank" rel="noopener" class="btn btn--whatsapp btn--lg">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.515z"/>
+            </svg>
+            <span>Consultar por WhatsApp</span>
+          </a>
+          <a href="mailto:{{ site.email }}" class="btn btn--outline btn--lg">
+            <svg class="btn__icon" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+            </svg>
+            <span>Enviar Correo</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

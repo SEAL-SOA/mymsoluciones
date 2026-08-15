@@ -1,32 +1,26 @@
+# Configuration for MyM Soluciones GitHub Pages website
 remote_theme: "mmistakes/minimal-mistakes@4.28.0"
 minimal_mistakes_skin: "dark"
 
 locale: "es-AR"
 title: "MyM Soluciones"
 title_separator: "|"
-subtitle: "Ingeniería y mantenimiento industrial"
-description: "Servicios de mantenimiento, automatización industrial y líneas de inyección de plástico."
+subtitle: "Ingeniería y Mantenimiento Industrial"
+description: "Servicios de mantenimiento electromecánico, automatización industrial, programación de PLCs, reparación electrónica y líneas de inyección."
 url: "https://mymsoluciones.github.io"
 baseurl: ""
 logo: "/assets/images/logo.svg"
-masthead_title: " "
 
-site_navigation: main
-
+# Contact Information
 phone: "+54 9 11 2345-6789"
 phone_link: "+5491123456789"
 email: "info@mymsoluciones.com.ar"
 whatsapp: "5491123456789"
-address: "Dorrego 80, B1722JCB Merlo, Provincia de Buenos Aires"
+address: "Buenos Aires, Argentina"
 
+# SEO & defaults
 search: false
 breadcrumb: false
-
-footer:
-  since: "2025"
-
-include:
-  - _pages
 
 plugins:
   - jekyll-include-cache

@@ -1,11 +1,15 @@
 main:
   - title: "Inicio"
-    url: "/#hero"
+    url: "#hero"
+  - title: "Quiénes Somos"
+    url: "#quienes-somos"
+  - title: "Automatización"
+    url: "#automatizacion"
   - title: "Servicios"
-    url: /#servicios
-  - title: "Nosotros"
-    url: /about/
+    url: "#servicios"
+  - title: "Reparaciones"
+    url: "#reparaciones"
+  - title: "Marcas"
+    url: "#marcas"
   - title: "Contacto"
-    url: /contacto/
-  - title: "Contacto"
-    url: "/#contacto"
+    url: "#contacto"
