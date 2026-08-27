@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="56" viewBox="0 0 280 56" role="img" aria-label="M&amp;M Soluciones Electromecánicas">
+  <defs>
+    <!-- Clip path for the overlapping intersection of two circles -->
+    <clipPath id="circleLeft">
+      <circle cx="28" cy="24" r="16" />
+    </clipPath>
+    <clipPath id="circleRight">
+      <circle cx="44" cy="24" r="16" />
+    </clipPath>
+    <!-- Pattern for hatch lines in intersection -->
+    <pattern id="hatch" width="6" height="6" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#60a5fa" stroke-width="2" />
+    </pattern>
+  </defs>
+
+  <!-- Group for Logo Icon -->
+  <g transform="translate(4, 2)">
+    <!-- Curved arrow indicator -->
+    <path d="M 12 20 A 18 18 0 0 1 20 8" fill="none" stroke="#93c5fd" stroke-width="1.75" stroke-linecap="round"/>
+    <path d="M 16 6 L 21 7.5 L 20 13" fill="none" stroke="#93c5fd" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Left Circle -->
+    <circle cx="28" cy="24" r="16" fill="none" stroke="#ffffff" stroke-width="2.5" />
+
+    <!-- Right Circle -->
+    <circle cx="44" cy="24" r="16" fill="none" stroke="#ffffff" stroke-width="2.5" />
+
+    <!-- Intersection Hatching -->
+    <g clip-path="url(#circleLeft)">
+      <circle cx="44" cy="24" r="16" fill="url(#hatch)" />
+    </g>
+  </g>
+
+  <!-- Typography: M&M -->
+  <text x="82" y="32" font-family="'Inter', 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif" font-size="25" font-weight="900" fill="#ffffff" letter-spacing="0.02em">M&amp;M</text>
+  <text x="146" y="32" font-family="'Inter', 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="800" fill="#60a5fa" letter-spacing="-0.01em">SOLUCIONES</text>
+  
+  <!-- Subtitle -->
+  <text x="83" y="47" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="700" fill="#93c5fd" letter-spacing="0.14em">ELECTROMECÁNICAS</text>
+</svg>
