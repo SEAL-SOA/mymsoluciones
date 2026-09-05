@@ -6,7 +6,7 @@ locale: "es-AR"
 title: "M&M Soluciones Electromecánicas"
 title_separator: "|"
 subtitle: "Ingeniería, Mantenimiento Industrial y Automatización"
-description: "Servicios profesionales de mantenimiento electromecánico, automatización industrial, programación de PLCs, reparación electrónica y líneas de inyección."
+description: "Servicios profesionales de mantenimiento electromecánico, automatización industrial, programación de PLCs, reparación electrónica y líneas de inyección en Buenos Aires y todo el país."
 url: "https://www.mymsoluciones.com.ar"
 baseurl: ""
 logo: "/assets/images/logo.svg"
@@ -24,6 +24,7 @@ breadcrumb: false
 
 plugins:
   - jekyll-include-cache
+  - jekyll-sitemap
 
 sass:
   sass_dir: _sass
